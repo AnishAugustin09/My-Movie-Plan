@@ -1,0 +1,29 @@
+<div class="container col-md-6 mt-3">
+    <button class="btn " (click)="mainMenu()">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <h2>REGISTER</h2><hr>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="customerName">Name</label>
+        <input type="text" name="customerName" id="customerName" placeholder="Enter Name" class="form-control" [(ngModel)]="user.customerName">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="Enter email" class="form-control" [(ngModel)]="user.customerEmail">
+    </div>
+    <div class="form-group">
+        <label for="Number">Number</label>
+        <input type="text" name="Number" id="Number" placeholder="Enter Number" class="form-control" [(ngModel)]="user.customerNumber"></div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter password" class="form-control" [(ngModel)]="user.password">
+    </div>
+     
+     
+    <br>
+   
+    <button class="btn btn-primary" >SUBMIT</button>
+
+</form>
+</div>

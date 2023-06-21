@@ -1,0 +1,30 @@
+<div class="container mt-4">
+    <button class="btn " (click)="mainMenu()">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <h4>Users</h4><hr>
+    <table class="table table-bodered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th><th>Email</th><th>Name</th><th>Number</th><th>Operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of users, let i =index">
+                <td>{{i+1}}</td>
+                <td>{{p.customerEmail}}</td>
+                <td>{{p.customerName}}</td>
+                <td>{{p.customerNumber}}</td>
+                <td>
+                    <a routerLink="/updateProduct/{{p.customerEmail}}">
+                        <button class="btn btn-success">Edit</button>
+                    </a>
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteProduct(p.customerEmail)" type="button">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    

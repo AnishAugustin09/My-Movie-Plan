@@ -1,0 +1,45 @@
+<div class="container col-md-6 mt-3">
+    <button class="btn " (click)="mainMenu()">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <h2>ADD MOVIE</h2><hr>
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="movieName">Movie Id</label>
+        <input type="text" name="movieName" id="movieName" placeholder="Enter Name" class="form-control" [(ngModel)]="movie.movieId">
+    </div>
+    <div class="form-group">
+        <label for="movieName">Movie Name </label>
+        <input type="text" name="movieName" id="movieName" placeholder="Enter Movie Name" class="form-control" [(ngModel)]="movie.movieName">
+    </div>
+    <div class="form-group">
+        <label for="Certified As">Certified As</label>
+        <input type="text" name="Certified As" id="Certified As" placeholder="Enter Certified As" class="form-control" [(ngModel)]="movie.movieCertifiedas"></div>
+    <div class="form-group">
+        <label for="Rating">Rating</label>
+        <input type="text" name="Rating" id="Rating" placeholder="Enter Rating" class="form-control" [(ngModel)]="movie.movieRating">
+    </div>
+    <div class="form-group">
+        <label for="Director">Director</label>
+        <input type="text" name="Director" id="Director" placeholder="Enter Director" class="form-control" [(ngModel)]="movie.movieDirector"></div>
+    <div class="form-group">
+        <label for="ActorName">Actor Name</label>
+        <input type="text" name="ActorName" id="ActorName" placeholder="Enter ActorName" class="form-control" [(ngModel)]="movie.movieActorName"></div>
+    <div class="form-group">
+        <label for="Producer">Producer</label>
+        <input type="text" name="Producer" id="Producer" placeholder="Enter Producer" class="form-control" [(ngModel)]="movie.movieProducre"></div>
+    <div class="form-group">
+        <label for="Image">Image</label>
+        <input type="text" name="Image" id="Image" placeholder="Enter Image" class="form-control" [(ngModel)]="movie.image"></div>
+        <div class="form-group">
+            <label for="Image">Category</label>
+            <input type="text" name="Category" id="Category" placeholder="Enter Category" class="form-control" [(ngModel)]="movie.movieCategory"></div>
+        
+     
+     
+    <br>
+   
+    <button class="btn btn-primary" >SUBMIT</button>
+
+</form>
+</div>

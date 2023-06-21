@@ -1,0 +1,97 @@
+
+<div class="container mt-2" >
+
+  <div class="moviedetails " *ngFor="let l of list" >
+    <h3>Book seats for <strong>{{l.movie.movieName}}</strong> movie</h3> 
+    <h5>Seats : {{totalseats}} &nbsp;Amount : {{totalticketprice}}</h5>
+    <h2></h2>
+  </div>
+  
+  <ul class="showcase col-md-15 mt-5">
+      <li>
+        <div class="seat" ></div>
+        <small>Available</small>
+      </li>
+      <li>
+        <div class="seat selected"></div>
+        <small>Selected</small>
+      </li>
+      <li>
+        <div class="seat sold"></div>
+        <small>Sold</small>
+      </li>
+    </ul>
+    <div class="container">
+      <div class="screen"></div>
+
+      <div class="row row-cols-md-4"(click)="selectSeat()" > <h3>A</h3>&nbsp;
+        <div class="seat sold"><p>a1</p></div>
+        <div class="seat sold" ><p>a2</p></div>
+        <div class="seat"><p>a3</p></div>
+        <div class="seat"><p>a4</p></div>
+        <div class="seat"><p>a5</p></div>
+        <div class="seat"><p>a6</p></div>
+        <div class="seat sold"><p>a7</p></div>
+        <div class="seat sold"><p>a8</p></div>
+      </div>
+
+      <div class="row row-cols-md-4" (click)="selectSeat()"><h3>B</h3>&nbsp;
+        <div class="seat" [ngClass]="{'bg-green': shouldShowGreen}" ><p>e1</p></div>
+        <div class="seat" [ngClass]="{'bg-green': shouldShowGreen}"><p>e2</p></div>
+        <div class="seat"><p>e3</p></div>
+        <div class="seat"><p>e4</p></div>
+        <div class="seat"><p>e5</p></div>
+        <div class="seat"><p>e6</p></div>
+        <div class="seat"><p>e7</p></div>
+        <div class="seat"><p>e8</p></div>
+      </div>
+      <div class="row row-cols-md-4" (click)="selectSeat()"><h3>C</h3>&nbsp;
+        <div class="seat"><p>v1</p></div>
+        <div class="seat"><p>v2</p></div>
+        <div class="seat sold"><p>v3</p></div>
+        <div class="seat sold"><p>v4</p></div>
+        <div class="seat sold"><p>v5</p></div>
+        <div class="seat sold"><p>v6</p></div>
+        <div class="seat"><p>v7</p></div>
+        <div class="seat"><p>v8</p></div>
+      </div>
+      <div class="row row-cols-md-4" (click)="selectSeat()"><h3>D</h3>&nbsp;
+        <div class="seat"><p>o1</p></div>
+        <div class="seat"><p>o2</p></div>
+        <div class="seat"><p>o3</p></div>
+        <div class="seat"><p>o4</p></div>
+        <div class="seat sold"><p>o5</p></div>
+        <div class="seat sold"><p>o6</p></div>
+        <div class="seat"><p>o7</p></div>
+        <div class="seat"><p>o8</p></div>
+      </div>
+      <div class="row row-cols-md-4" (click)="selectSeat()"><h3>E</h3>&nbsp;
+        <div class="seat"><p>u1</p></div>
+        <div class="seat"><p>u2</p></div>
+        <div class="seat"><p>u3</p></div>
+        <div class="seat"><p>u4</p></div>
+        <div class="seat"><p>u5</p></div>
+        <div class="seat"><p>u6</p></div>
+        <div class="seat"><p>u7</p></div>
+        <div class="seat"><p>u8</p></div>
+      </div>
+      <div class="row row-cols-md-4" (click)="selectSeat()"><h3>F</h3>&nbsp;
+        <div class="seat"><p>z1</p></div>
+        <div class="seat"><p>z2</p></div>
+        <div class="seat"><p>z3</p></div>
+        <div class="seat"><p>z4</p></div>
+        <div class="seat"><p>z5</p></div>
+        <div class="seat"><p>z6</p></div>
+        <div class="seat"><p>z7</p></div>
+        <div class="seat"><p>z8</p></div>
+        
+      </div>
+      
+    </div>
+    
+      <a routerLink="/payment"><button class="btn btn-primary">Continue</button></a>
+    
+</div>
+
+
+

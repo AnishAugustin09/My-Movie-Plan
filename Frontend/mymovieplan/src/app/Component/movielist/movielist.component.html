@@ -1,0 +1,31 @@
+<div class="container mt-4">
+    <button class="btn " (click)="mainMenu()">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <h4>Movies</h4><hr>
+    <table class="table table-bodered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th><th>Name</th><th>Seller</th><th>Description</th><th>Price</th><th>Operation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of movies">
+                <td>{{p.movieId}}</td>
+                <td>{{p.movieName}}</td>
+                <td>{{p.movieRating}}</td>
+                <td>{{p.movieDirector}}</td>
+                <td>{{p.movieProducre}}</td>
+                <td>
+                    <a routerLink="/updateProduct/{{p.movieId}}">
+                        <button class="btn btn-success">Edit</button>
+                    </a>
+                </td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteProduct(p.movieId)" type="button">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    
